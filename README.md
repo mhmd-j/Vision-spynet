@@ -32,5 +32,5 @@ Note: The script assumes that the input frames are in the Monkaa_cleanpass datas
 
 ## References
 - [SpyNet with Pytorch](https://github.com/Guillem96/spynet-pytorch)
-- [Monkaa and Driving_cleanpass dataset](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)
+- [Monkaa and Driving cleanpass dataset](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)
 - [Original SpyNet implementation](https://github.com/anuragranj/spynet)
