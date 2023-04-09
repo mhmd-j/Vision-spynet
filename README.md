@@ -7,17 +7,8 @@ implementation of SpyNet in PyTorch for Computer Vision course project
 This project addresses optical flow estimation in a fused approach that employs image pyramids and convolutional neural networks. Using image pyramids enables the method to estimate optical flow in a coarse-to-fine strategy. 
 At each level of the pyramid, the algorithm estimates motions by warping one image of a pair at each pyramid level by the current flow estimate obtained from a CNN and then updates the estimation for the next level. Consequently, Unlike FlowNet, the networks do not need to cope with large motions.
 
-This model is 96% smaller the the FlowNet in terms of parameters.
-
 ## Inference 
-
-for inference change the following addresses and run the inference.py
-```python
-inference('./Monkaa_cleanpass', './models/tanh_scale_noNormalize20230406-1234/final.pt', show_acc=True)
-```
-# Readme
-
-This is a Python script for performing inference using a pretrained SpyNet model for optical flow estimation. The script takes input frames from a dataset, computes optical flow using the SpyNet model, and visualizes the results.
+This is a Python script for performing inference using a pretrained SpyNet model for optical flow estimation. The `inference.py` script takes input frames from a dataset, computes optical flow using the SpyNet model, and visualizes the results.
 
 ## Requirements
 - Python 3.8
