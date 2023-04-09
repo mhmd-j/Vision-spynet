@@ -20,11 +20,13 @@ This is a Python script for performing inference using a pretrained SpyNet model
 
 ## Usage
 1. Install the required dependencies using `pip` or `conda`.
-2. Download the pretrained SpyNet model checkpoint and place it in the appropriate directory.
-3. Modify the `data_root` and `checkpoint_name` arguments in the `inference()` function call to specify the location of your dataset and the path to the pretrained model checkpoint, respectively.
-4. Optionally, set `show_acc` to `True` if you want to display the accuracy of the optical flow estimation.
-5. Run the script using `python inference.py` in your terminal or Python environment.
-6. The script will generate visualizations of the optical flow estimation results, including an image plot and a quiver plot.
+2. Download the pretrained SpyNet model checkpoint and place it in the appropriate directory. [sample](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlow/assets/Sampler.tar.gz)
+3. The dataset for Monkaa should be like `.data/flow` and `.data/image` where each of the contain categories of Monkaa dataset.
+4. Similarly, for Driving dataset, images should be in `.data/image` and flow files should be in `.data/flow`.
+6. Modify the `data_root` and `checkpoint_name` arguments in the `inference()` function call to specify the location of your dataset and the path to the pretrained model checkpoint, respectively.
+7. Optionally, set `show_acc` to `True` if you want to display the accuracy of the optical flow estimation.
+8. Run the script using `python inference.py` in your terminal or Python environment.
+9. The script will generate visualizations of the optical flow estimation results, including an image plot and a quiver plot.
 
 Note: The script assumes that the input frames are in the Monkaa_cleanpass dataset format, but can be easily modified to support other datasets by changing the `valid_ds` dataset instantiation to the appropriate dataset class and providing the correct data root.
 
