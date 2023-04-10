@@ -26,9 +26,8 @@ def inference(data_root: str, checkpoint_name:str, show_acc=False) -> None:
     model = SpyModel.SpyNet.from_pretrained(checkpoint_name, map_location=device)
     model.to(device)
     model.eval()
-    
+    err = SpyModel.EPELoss()
     if show_acc:
-        err = SpyModel.EPELoss()
         valid_ds = dataset.MonkaaDataset(data_root, transform=tfms)
         # valid_ds = dataset.DrivingDataset(data_root, transform=tfms)
 
