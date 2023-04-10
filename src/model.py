@@ -172,9 +172,9 @@ class SpyNet(nn.Module):
         def get_model(path: str) -> 'SpyNet':
             checkpoint = torch.load(path, 
                                     map_location=map_location)
-            k = len(checkpoint) // 10
+            k = len(checkpoint) // 30 
 
-            instance = cls(levels_no=4)
+            instance = cls(levels_no=k)
             instance.load_state_dict(checkpoint, strict=False)
             instance.to(map_location)
             return instance
